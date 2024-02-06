@@ -14,6 +14,7 @@ endif
 LDFLAGS = -macosx_version_min 11.0 -L/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib -lSystem 
 
 all : $(NAME)
+	echo " \033[1;34m @@ Build Complete @@ \033[0m "
 
 $(NAME) : $(OBJS)
 	ld $^ -o $@ $(LDFLAGS) -e $(ENTRYPOINT)
